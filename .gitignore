@@ -1,0 +1,8 @@
+# ignore the API key
+apikey
+
+# text editor stuff
+*~
+
+# virtualenv
+env/*
