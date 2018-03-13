@@ -1,0 +1,7 @@
+pytest
+hypothesis
+faker
+dask[complete]
+requests
+pandas
+numpy

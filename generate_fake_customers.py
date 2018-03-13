@@ -4,6 +4,7 @@ import json
 from faker import Faker
 import numpy as np
 
+# fake data utility
 fake = Faker()
 
 # get the apikey
@@ -11,16 +12,16 @@ PATH_API_KEY = os.path.join(os.path.dirname(os.path.abspath(__file__)),'apikey')
 with open(PATH_API_KEY, 'r') as api_f:
     api_key = api_f.read()
 
+# reusable params
 PARAMS = {'key': api_key}
 
+# some stubs for calling hte API
 ROOT_URL = 'http://api.reimaginebanking.com/data'
 API_URL = 'http://api.reimaginebanking.com'
 URL = 'http://api.reimaginebanking.com/customers?key={}'.format(api_key)
 
-
-N_CUSTOMERS = 1000
-
-# delete customers
+# how many customers to generate
+N_CUSTOMERS = 10
 
 def new_customer_payload():
     new_cust = {}
@@ -66,13 +67,36 @@ def get_customers():
     r = requests.get(API_URL + '/customers', params={'key': api_key})
     return r.json()
 
+def generate_card():
+
+    card_dict = {
+        'type': 'Credit Card',
+        'nickname': fake.word(),
+        'rewards': 0,
+        'balance': 0}
+    return card_dict
+
 def add_customer_cards(lst_customers):
 
     for cust in lst_customers:
+
+        this_url = API_URL + '/customers/{id}/accounts'.format(id=cust['_id'])
+
         # how many credit cards to give this customer
         n_cards = np.random.randint(3)
 
-        # create credit card account
+        for _ in range(n_cards):
+            # get new credit card
+            new_card = generate_card()
+
+            # add it
+            r = requests.post(
+                this_url,
+                headers={
+                    'Content-type': 'application/json',
+                    'Accept': 'application/json'},
+                data=json.dumps(new_card),
+                params=PARAMS)
 
 def get_accounts():
     raise NotImplementedError
@@ -85,6 +109,7 @@ def add_transactions(lst_accounts):
 
 
 if __name__ == '__main__':
-    # r = remove_customers()
-    # add_customers(1000)
-    print(get_customers())
+    remove_customers()
+    add_customers()
+    custs = get_customers()
+    add_customer_cards(custs)
