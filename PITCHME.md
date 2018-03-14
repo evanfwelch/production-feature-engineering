@@ -26,7 +26,7 @@
 ## Case Study from C1 Digital Product
 #### Using credit card purchases to find cohorts
 
-<iframe class="stretch" data-src="http://api.reimaginebanking.com/documentation"></iframe>
+<iframe class="stretch" data-src="http://api.reimaginebanking.com/documentation#!/Account"></iframe>
 
 
 
