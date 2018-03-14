@@ -3,10 +3,11 @@
 ### Evan Welch
 
 ---
-
+<!-- .slide: style="text-align: left;"> -->  
 ## About me!
 
 <br>
+
 
 @fa[github gp-tip](github.com/evanfwelch)
 @fa[linkedin-square gp-tip](linkedin.com/in/evanfwelch)
