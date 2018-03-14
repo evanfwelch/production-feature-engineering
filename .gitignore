@@ -6,3 +6,9 @@ apikey
 
 # virtualenv
 env/*
+
+# zipped data
+merchant_data/*.zip
+
+# ds store
+**/.DS_STORE

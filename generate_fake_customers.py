@@ -77,13 +77,15 @@ def generate_card():
     return card_dict
 
 def add_customer_cards(lst_customers):
-
+    """
+    Create card accounts for these customers
+    """
     for cust in lst_customers:
 
         this_url = API_URL + '/customers/{id}/accounts'.format(id=cust['_id'])
 
         # how many credit cards to give this customer
-        n_cards = np.random.randint(3)
+        n_cards = np.random.randint(1,4)
 
         for _ in range(n_cards):
             # get new credit card
@@ -98,18 +100,40 @@ def add_customer_cards(lst_customers):
                 data=json.dumps(new_card),
                 params=PARAMS)
 
-def get_accounts():
-    raise NotImplementedError
+def get_all_accounts():
+    # get this url
+    this_url = API_URL + '/accounts'
 
-def generate_transaction(datetime):
-    raise NotImplementedError
+    # call API
+    r = requests.get(this_url,
+        headers={'Accept': 'application/json'},
+        params=PARAMS)
 
-def add_transactions(lst_accounts):
-    raise NotImplementedError
+    # get acct details
+    acct_details = r.json()
 
+    # also by cust
+    acct_by_cust = {}
+    for acct in acct_details:
+        # extract
+        cust_id = acct['customer_id']
+        acct_id = acct['_id']
+
+        # deal with this cust
+        if cust_id not in acct_by_cust:
+            acct_by_cust[cust_id] = []
+
+        acct_by_cust[cust_id].append(acct_id)
+    return acct_details, acct_by_cust
 
 if __name__ == '__main__':
+    # get rid of customers
     remove_customers()
+    # add customers
     add_customers()
+    # get those added custs
     custs = get_customers()
+    # make cc accounts
     add_customer_cards(custs)
+    # get those accts
+    accts, acct_by_cust = get_all_accounts()
