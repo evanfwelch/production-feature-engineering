@@ -26,9 +26,9 @@
 ## Case Study from C1 Digital Product
 #### Using credit card purchases to find cohorts
 
----?code=reference/swagger.json&lang=json&title=Capital One Hackathon API
+<iframe class="stretch" data-src="http://api.reimaginebanking.com/documentation"></iframe>
 
-@[1,3-6](Present code found within any repo source file.)
+
 
 @fa[credit-card gp-tip](C1 Hackathon API)
 ---
@@ -38,6 +38,7 @@
 ---
 
 
+---?code=reference/swagger.json&lang=json&title=Capital One Hackathon API
 
 
 @[1,3-6](Present code found within any repo source file.)
