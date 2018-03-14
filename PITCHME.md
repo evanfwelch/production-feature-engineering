@@ -19,11 +19,26 @@
 - Build a Fake Data Ecosystem |
 - Use a task scheduler |
 - Chunk your "queries" wisely |
-- Use distributed processing earlier thank you think 
+- Separate data and code
+- Distribute processing earlier thank you think |
+
+---
+## Case Study from C1 Digital Product
+#### Using credit card purchases to find cohorts
+
+---?code=reference/swagger.json&lang=json&title=Capital One Hackathon API
+
+@[1,3-6](Present code found within any repo source file.)
+
+@fa[credit-card gp-tip](C1 Hackathon API)
+---
+## Fake Data Ecosystem
+
 
 ---
 
----?code=sample/go/server.go&lang=golang&title=Golang File
+
+
 
 @[1,3-6](Present code found within any repo source file.)
 @[8-18](Without ever leaving your slideshow.)
