@@ -26,11 +26,9 @@
 <!-- .slide: style="text-align: left;"> -->  
 ## Case Study: C1 Digital Product
 
-- Using credit card purchases to find cohorts
-- ... or something
-
-###### Today's data source
-@fa[credit-card gp-tip](http://api.reimaginebanking.com/)
+- Using credit card purchases to find cohorts |
+- ... or something |
+@fa[credit-card gp-tip](http://api.reimaginebanking.com/) |
 
 ---
 ## Fake Data Ecosystem
