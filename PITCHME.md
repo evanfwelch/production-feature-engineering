@@ -6,6 +6,8 @@
 
 ## About me!
 
+* Bachelor's in physics
+* Automated trading
 <br>
 
 @fa[github gp-tip](linkedin.com/in/evanfwelch)
