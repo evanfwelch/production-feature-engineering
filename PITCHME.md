@@ -4,12 +4,11 @@
 
 ---
 
-## Tips!
+## About me!
 
 <br>
 
 @fa[github gp-tip](linkedin.com/in/evanfwelch)
-
 @fa[instagram gp-tip](evanfwelch)
 
 ---
