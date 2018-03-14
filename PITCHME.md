@@ -3,12 +3,12 @@
 ### Evan Welch
 
 ---
-<!-- .slide: style="text-align: left;"> -->  
+
 ## About me!
 
 <br>
 
-
+<!-- .slide: style="text-align: left;"> -->  
 @fa[github gp-tip](github.com/evanfwelch)
 @fa[linkedin-square gp-tip](linkedin.com/in/evanfwelch)
 @fa[instagram gp-tip](evanfwelch)
@@ -16,11 +16,10 @@
 ---
 
 ## Overview
-
-- Fake Data Ecosystem |
+- Build a Fake Data Ecosystem |
 - Use a task scheduler |
-- Chunk your data wisely |
-- Use distributed processing |
+- Chunk your "queries" wisely |
+- Use distributed processing earlier thank you think 
 
 ---
 
