@@ -20,7 +20,7 @@
 - Use a task scheduler |
 - Chunk your "queries" wisely |
 - Separate data and code |
-- Distribute processing earlier thank you think |
+- Distribute processing on small data |
 
 ---
 <!-- .slide: style="text-align: left;"> -->  
@@ -31,11 +31,24 @@
 
 <br>
 
-@fa[credit-card gp-tip](http://api.reimaginebanking.com/) 
+@fa[credit-card gp-tip](http://api.reimaginebanking.com/)
 
 ---
 ## Fake Data Ecosystem
+---?code=generate_fake_data.py&lang=python&Fake Data Generator
 
+
+---
+## Use a task scheduler
+
+---
+## Chunk your "queries" wisely
+
+---
+## Separate data from code
+
+---
+## Distributed processing on small data
 
 ---
 
