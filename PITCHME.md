@@ -26,11 +26,8 @@
 ## Case Study from C1 Digital Product
 #### Using credit card purchases to find cohorts
 
-<iframe class="stretch" data-src="http://api.reimaginebanking.com/documentation"></iframe>
-
-
-
-@fa[credit-card gp-tip](C1 Hackathon API)
+Today's data source
+@fa[credit-card gp-tip](http://api.reimaginebanking.com/documentation)
 ---
 ## Fake Data Ecosystem
 
