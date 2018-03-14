@@ -8,8 +8,8 @@
 
 <br>
 
-@fa[github](github.com/evanfwelch)
-@fa[linkedin gp-tip](linkedin.com/in/evanfwelch)
+@fa[github gp-tip](github.com/evanfwelch)
+@fa[linkedin-square gp-tip](linkedin.com/in/evanfwelch)
 @fa[instagram gp-tip](evanfwelch)
 
 ---
