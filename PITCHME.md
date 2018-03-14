@@ -1,5 +1,5 @@
-# Feature Engineering for Prod
-### How to *iterate to ship*
+## Feature Engineering for Prod
+### Evan Welch
 
 ---
 
