@@ -10,7 +10,7 @@
 
 @fa[github gp-tip](linkedin.com/in/evanfwelch)
 
-@fa[instagram gp-tip](@evanfwelch)
+@fa[instagram gp-tip](evanfwelch)
 
 ---
 
