@@ -19,15 +19,17 @@
 - Build a Fake Data Ecosystem |
 - Use a task scheduler |
 - Chunk your "queries" wisely |
-- Separate data and code
+- Separate data and code |
 - Distribute processing earlier thank you think |
 
 ---
 ## Case Study from C1 Digital Product
-#### Using credit card purchases to find cohorts
+- Using credit card purchases to find cohorts
+- ... or something
 
-Today's data source
-@fa[credit-card gp-tip](http://api.reimaginebanking.com/documentation)
+###### Today's data source
+@fa[credit-card gp-tip](http://api.reimaginebanking.com/)
+
 ---
 ## Fake Data Ecosystem
 
