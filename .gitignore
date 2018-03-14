@@ -3,6 +3,7 @@ apikey
 
 # text editor stuff
 *~
+_retired/*
 
 # python stuff
 *.pyc
