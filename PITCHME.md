@@ -35,7 +35,7 @@
 
 ---
 ## Fake Data Ecosystem
----?code=generate_fake_data.py&lang=python&Fake Data Generator
+---?code=generate_fake_data.py&lang=python&title=Fake Data Generator
 
 @[1,3-30](HEre we go)
 
