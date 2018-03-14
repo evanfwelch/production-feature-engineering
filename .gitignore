@@ -4,6 +4,9 @@ apikey
 # text editor stuff
 *~
 
+# python stuff
+*.pyc
+
 # virtualenv
 env/*
 

@@ -1,6 +1,6 @@
-# White
+# Feature Engineering for Production
 
-### A GitPitch Presentation Template
+### Architecting your data transformations so they're ready to ship
 
 ---
 
@@ -14,14 +14,14 @@
 
 ---
 
-## Template Features
+## Overview
 
-- Code Presenting |
-- Repo Source, Static Blocks, GIST |
-- Custom CSS Styling |
-- Slideshow Background Image |
-- Slide-specific Background Images |
-- Custom Logo, TOC, and Footnotes |
+- Fake Data Ecosystem |
+- Use a task scheduler |
+- Chunk your data wisely |
+- Use distributed processing |
+
+---
 
 ---?code=sample/go/server.go&lang=golang&title=Golang File
 
@@ -73,7 +73,7 @@ http.createServer(function (request, response) {
 ## Template Help
 
 - [Code Presenting](https://github.com/gitpitch/gitpitch/wiki/Code-Presenting)
-  + [Repo Source](https://github.com/gitpitch/gitpitch/wiki/Code-Delimiter-Slides), [Static Blocks](https://github.com/gitpitch/gitpitch/wiki/Code-Slides), [GIST](https://github.com/gitpitch/gitpitch/wiki/GIST-Slides) 
+  + [Repo Source](https://github.com/gitpitch/gitpitch/wiki/Code-Delimiter-Slides), [Static Blocks](https://github.com/gitpitch/gitpitch/wiki/Code-Slides), [GIST](https://github.com/gitpitch/gitpitch/wiki/GIST-Slides)
 - [Custom CSS Styling](https://github.com/gitpitch/gitpitch/wiki/Slideshow-Custom-CSS)
 - [Slideshow Background Image](https://github.com/gitpitch/gitpitch/wiki/Background-Setting)
 - [Slide-specific Background Images](https://github.com/gitpitch/gitpitch/wiki/Image-Slides#background)
@@ -117,4 +117,3 @@ http.createServer(function (request, response) {
 
 ### <span class="white">Get your presentation started!</span>
 ### [Download this template @fa[external-link gp-download]](https://gitpitch.com/template/download/white)
-
