@@ -1,4 +1,5 @@
 ## Feature Engineering for Prod
+
 ### Evan Welch
 
 ---
@@ -7,7 +8,7 @@
 
 <br>
 
-@fa[arrows gp-tip](Press F to go Fullscreen)
+@fa[github gp-tip](Press F to go Fullscreen)
 
 @fa[microphone gp-tip](Press S for Speaker Notes)
 
