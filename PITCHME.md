@@ -28,7 +28,10 @@
 
 - Using credit card purchases to find cohorts |
 - ... or something |
-@fa[credit-card gp-tip](http://api.reimaginebanking.com/) |
+
+<br>
+
+@fa[credit-card gp-tip](http://api.reimaginebanking.com/) 
 
 ---
 ## Fake Data Ecosystem
