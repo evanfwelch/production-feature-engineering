@@ -8,9 +8,9 @@
 
 <br>
 
-@fa[github gp-tip](Press F to go Fullscreen)
+@fa[github gp-tip](linkedin.com/in/evanfwelch)
 
-@fa[microphone gp-tip](Press S for Speaker Notes)
+@fa[instagram gp-tip](www.instagram.com/evanfwelch)
 
 ---
 
