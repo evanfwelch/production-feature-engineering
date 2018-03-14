@@ -23,7 +23,9 @@
 - Distribute processing earlier thank you think |
 
 ---
-## Case Study from C1 Digital Product
+<!-- .slide: style="text-align: left;"> -->  
+## Case Study: C1 Digital Product
+
 - Using credit card purchases to find cohorts
 - ... or something
 
