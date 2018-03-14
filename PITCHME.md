@@ -1,6 +1,5 @@
-# Feature Engineering for Production
-
-### Architecting your data transformations so they're ready to ship
+# Feature Engineering for Prod
+### How to *iterate to ship*
 
 ---
 
