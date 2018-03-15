@@ -31,11 +31,13 @@
 <!-- .slide: style="text-align: left;"> -->  
 ## Case Study
 
-### Data landscape
 <ul style="list-style: none;">
-<li class="fragment">@fa[bank](Company X is a bank with millions of customers)</li>
-<li class="fragment">@fa[bank](Company X is a bank with millions of customers)</li>
-<li class="fragment">@fa[bank](Company X is a bank with millions of customers)</li>
+<li class="fragment">@fa[bank](C1 is a bank ...)</li>
+<li class="fragment">@fa[users](with millions of customers...)</li>
+<li class="fragment">@fa[credit-card](each of whom has several cards...)</li>
+<li class="fragment">@fa[shopping-cart](on which they make purchases...)</li>
+<li class="fragment">@fa[amazon, apple](at several stores...)</li>
+
 </ul>
 
 <!--
