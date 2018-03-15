@@ -34,6 +34,24 @@ Get in touch!
 </p>
 
 ---
+<!-- .slide: style="text-align: left;"> -->  
+## Possible Analytical Questions
+- Do the customers fall into different spending cohorts? |
+- Is spending predictive of other behaviors? |
+- Do abrupt changes in spending indicate a life event? |
+
+
+---
+<!-- .slide: style="text-align: left;"> -->  
+## To answer any of these
+
+We'll need to:
+- pull some data |
+- do **FEATURE ENGINEERING** |
+- analyze/visualize/model something |
+
+
+---
 <!-- .slide: style="text-align: left;"> -->
 ## Strategies we will cover:
 
@@ -48,21 +66,7 @@ Get in touch!
 </p>
 
 
----
-<!-- .slide: style="text-align: left;"> -->  
-## Possible Analytical Questions
-- Do the customers fall into different spending cohorts? |
-- Is spending predictive of other behaviors? |
-- Do abrupt changes in spending indicate a life event? |
 
----
-<!-- .slide: style="text-align: left;"> -->  
-## To answer any of these
-
-We need to:
-- pull some data |
-- do **FEATURE ENGINEERING** |
-- analyze/visualize/model something |
 
 
 ---
