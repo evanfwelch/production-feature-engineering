@@ -250,7 +250,7 @@ for min_date, max_date in my_date_ranges:
     max_date=max_date))
 ```
 
-Note: consider running your queries within SQL
+Note: consider running your queries within python... param subbing... version on GH... credentials...
 
 ---?code=pull_raw_data.py&lang=python&title=Isolated requirements for ETL
 @[209-214](Depending on isolated queries)
