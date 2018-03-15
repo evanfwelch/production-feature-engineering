@@ -1,12 +1,10 @@
 ## Feature Engineering for Prod
 
-### Evan Welch
-
-Mar 14th.... 15th
+#### Evan Welch
 
 ---
 
-## About me!
+## About me
 
 <br>
 
@@ -18,22 +16,34 @@ Mar 14th.... 15th
 ---
 
 ## Overview
+
+#### Strategies and pointers
 - Build a Fake Data Ecosystem |
 - Use a task scheduler |
 - Chunk your "queries" wisely |
 - Separate data and code |
 - Distribute processing on small data |
 
+#### Q+A |
+- Please interrupt as I go! |
+
 ---
 <!-- .slide: style="text-align: left;"> -->  
-## Case Study: C1 Digital Product
+## Case Study: Bank Digital Product
 
-- Using credit card purchases to find cohorts |
-- ... or something |
+### Data landscape |
+@fa[bank](Company X is a bank with millions of customers) |
+@fa[person](These customers have multiple accounts) |
+@fa[credit-card](A given credit card account makes many purchases) |
+@fa[store](The merchants have attributes, categories) |
+
+### Analytical questions/needs |
+- Do the customers fall into different spending cohorts? |
+- Are spending behaviors (or changes thereof) predictive of other behaviors? |
 
 <br>
 
-@fa[credit-card gp-tip](http://api.reimaginebanking.com/)
+@fa[database gp-tip](http://api.reimaginebanking.com/) |
 
 ---
 ## Fake Data Ecosystem
