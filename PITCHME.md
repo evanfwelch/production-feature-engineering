@@ -17,11 +17,11 @@
 <!-- .slide: style="text-align: left;"> -->
 ## Strategies we will cover:
 
-- Build a Fake Data Ecosystem |
-- Use a task scheduler |
-- Chunk your "queries" wisely |
-- Separate data and code |
-- Distributed processing on small data |
+- Building a Fake Data Ecosystem |
+- Using a task scheduler |
+- Chunking your "queries" wisely |
+- Separating data and code |
+- Using "Big Data" tools on small data |
 
 <p class="fragment">
 *Please interrupt at anytime!*
@@ -31,11 +31,13 @@
 <!-- .slide: style="text-align: left;"> -->  
 ## Case Study: Bank Digital Product
 
+<ul class="fragment">
 ### Data landscape |
 @fa[bank](Company X is a bank with millions of customers) |
 @fa[person](These customers have multiple accounts) |
 @fa[credit-card](A given credit card account makes many purchases) |
 @fa[store](The merchants have attributes, categories) |
+</ul>
 
 ### Analytical questions/needs |
 - Do the customers fall into different spending cohorts? |
