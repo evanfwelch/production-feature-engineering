@@ -69,11 +69,30 @@
 @[151-225](Randomly generate transaction data)
 @[41-63](Clean up after yourself)
 
+---
+<!-- .slide: style="text-align: left;"> -->  
+## What's wrong with this picture?
 
+```bash
+cd my/project/folder
+
+# get data
+./get_account_data.sh > accounts.json
+./get_customer_data.sh > customers.json
+./get_merchant_data.sh > merchants.json
+echo "Done getting account, customer and merchant data"
+
+# run transaction miner
+python mine_transaction_data.py
+echo "Done mining transaction"
+
+# start jupyter notebook
+jupyter notebook ml_model_newest_v2.ipynb
+```
 
 ---
 <!-- .slide: style="text-align: left;"> -->  
-## Use a task scheduler
+## Strategy: Use a task scheduler
 
 - Airflow (by Airbnb) |
 - GNU make |
