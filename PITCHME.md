@@ -14,7 +14,7 @@
 @fa[instagram gp-tip](evanfwelch)
 
 ---
-
+<!-- .slide: style="text-align: left;"> -->
 ## Overview
 
 #### Strategies and pointers
@@ -24,8 +24,7 @@
 - Separate data and code |
 - Distribute processing on small data |
 
-#### Q+A |
-- Please interrupt as I go! |
+###### Please interrupt at anytime!
 
 ---
 <!-- .slide: style="text-align: left;"> -->  
