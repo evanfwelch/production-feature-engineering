@@ -15,9 +15,8 @@
 
 ---
 <!-- .slide: style="text-align: left;"> -->
-# Overview
+# Strategies we will cover:
 
-## Strategies and pointers
 - Build a Fake Data Ecosystem |
 - Use a task scheduler |
 - Chunk your "queries" wisely |
