@@ -31,13 +31,19 @@
 <!-- .slide: style="text-align: left;"> -->  
 ## Case Study: Bank Digital Product
 
-<ul class="fragment">
+<ul>
 ### Data landscape |
-@fa[bank](Company X is a bank with millions of customers) |
+<li class="fragment">@fa[bank](Company X is a bank with millions of customers)</li>
+<li class="fragment">@fa[bank](Company X is a bank with millions of customers)</li>
+<li class="fragment">@fa[bank](Company X is a bank with millions of customers)</li>
+<li class="fragment">@fa[bank](Company X is a bank with millions of customers)</li>
+</ul>
+
+<!--
 @fa[person](These customers have multiple accounts) |
 @fa[credit-card](A given credit card account makes many purchases) |
 @fa[store](The merchants have attributes, categories) |
-</ul>
+</ul> -->
 
 ### Analytical questions/needs |
 - Do the customers fall into different spending cohorts? |
