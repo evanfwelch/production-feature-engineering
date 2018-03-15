@@ -31,9 +31,8 @@
 <!-- .slide: style="text-align: left;"> -->  
 ## Case Study: Bank Digital Product
 
-<ul>
 ### Data landscape |
-<li class="fragment">@fa[bank](Company X is a bank with millions of customers)</li>
+@fa[bank class="fragment"](Company X is a bank with millions of customers)
 <li class="fragment">@fa[bank](Company X is a bank with millions of customers)</li>
 <li class="fragment">@fa[bank](Company X is a bank with millions of customers)</li>
 <li class="fragment">@fa[bank](Company X is a bank with millions of customers)</li>
