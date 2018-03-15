@@ -61,7 +61,7 @@ We'll need to:
 *but doing so at scale, without mistakes, for production*
 </p>
 
-Note: Whether it's a dashboard, a simple KPI, or an ML model, you'll need to go through some basic steps. Use AGILE or GH Projects...
+Note: Whether it's a dashboard, a simple KPI, or an ML model, you're analytical plan will share some basic steps
 ---
 <!-- .slide: style="text-align: left;"> -->
 ## Strategies we will cover:
@@ -120,14 +120,22 @@ Note: obviously projects evolve organically, and the above is ok for many cases,
 ---
 <!-- .slide: style="text-align: left;"> -->  
 ## Quick luigi demo...
+Note: show live demo first
 
-Note: so the goal is to get transactions, joined up with customers and merchant info... no feature engineering YET
 
 ---?code=pull_raw_data.py&lang=python&title=using luigi to schedule tasks
 @[21-44](A simple luigi.Task that calls an API)
 @[201-213](A more complex task that outer joins and flattens the data)
 
-Note: show live demo
+Note: so the goal is to get transactions, joined up with customers and merchant info... no feature engineering YET
+
+<!-- .slide: style="text-align: left;"> -->
+## Strategies we will cover:
+* ~~Using a task scheduler~~
+* Building a Fake Data Ecosystem
+* Chunking your "queries" wisely
+* Separating data from operations
+* Using "Big Data" tools on small data
 
 ---
 <!-- .slide: style="text-align: left;"> -->  
