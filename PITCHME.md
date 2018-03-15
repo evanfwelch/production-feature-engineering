@@ -2,6 +2,8 @@
 
 ### Evan Welch
 
+Mar 14th.... 15th
+
 ---
 
 ## About me!
@@ -35,21 +37,46 @@
 
 ---
 ## Fake Data Ecosystem
+
+### Why
+* unit testing
+* integration testing
+* edge cases
+* interpretability
+
 ---?code=generate_fake_data.py&lang=python&title=Fake Data Generator
 
-@[1,3-30](HEre we go)
+@[1,3-30](Here we go)
 
 ---
 ## Use a task scheduler
 
+#### Examples
+* Luigi
+* Airflow
+* GNU make
+
+Now walk through luigi example
 ---
 ## Chunk your "queries" wisely
+
+
 
 ---
 ## Separate data from code
 
+### and separate code into
+* filter
+* map
+* aggregate
+
 ---
 ## Distributed processing on small data
+
+### Why?
+* can easily scale when you have more data (add more workers)
+* deal with edge cases
+* force yourself to not see whole picture up front
 
 ---
 

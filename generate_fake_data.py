@@ -21,7 +21,7 @@ API_URL = 'http://api.reimaginebanking.com'
 #############
 
 # how many customers to generate
-N_CUSTOMERS = 1000
+N_CUSTOMERS = 10
 
 def new_customer_payload():
     new_cust = {}
@@ -40,6 +40,18 @@ def new_customer_payload():
 
 def remove_customers():
     params={'key': API_KEY, 'type': 'Customers'}
+    r = requests.delete(
+        API_URL + '/data',
+        params=params,
+        headers={'Accept': 'application/json'})
+
+    if r.status_code == 404:
+        resp = r.json()
+        if resp['message'] != 'No data to delete':
+            raise Exception(r.json())
+
+def remove_accounts():
+    params={'key': API_KEY, 'type': 'Accounts'}
     r = requests.delete(
         API_URL + '/data',
         params=params,
@@ -76,6 +88,7 @@ def generate_card():
         'rewards': 0,
         'balance': 0}
     return card_dict
+
 
 def add_customer_cards(lst_customers):
     """
@@ -215,14 +228,13 @@ def generate_transactions(custs, acct_by_cust, merchants):
 if __name__ == '__main__':
     # get rid of customers
     remove_customers()
-
     # add customers
     add_customers()
-
     # get those added custs
     custs = get_customers()
 
     # make cc accounts
+    remove_accounts()
     add_customer_cards(custs)
 
     # get those accts

@@ -1,6 +1,7 @@
 pytest
 hypothesis
 faker
+hypothesis
 dask[complete]
 requests
 pandas
