@@ -15,14 +15,14 @@
 
 ---
 <!-- .slide: style="text-align: left;"> -->
-## Overview
+# Overview
 
-Strategies and pointers
+## Strategies and pointers
 - Build a Fake Data Ecosystem |
 - Use a task scheduler |
 - Chunk your "queries" wisely |
 - Separate data and code |
-- Distribute processing on small
+- Distributed processing on small data |
 
 *Please interrupt at anytime!*
 
