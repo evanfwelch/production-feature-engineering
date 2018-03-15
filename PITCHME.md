@@ -119,16 +119,16 @@ Quick luigi demo
 - you're worried about outliers |
 - your customers might have duplicate accounts |
 - you need to prove your code works... |
-- but the engineers don't have access to your data |
+- but the engineers don't have your data privileges |
 
 ---
 <!-- .slide: style="text-align: left;"> -->  
 ## Strategy: build a fake data playground
-- to anticipate changes
-- for unit testing
-- to model edge cases ...
-- and typical cases ...
-- and "happy path" cases ...
+- to anticipate changes |
+- for unit testing |
+- to model edge cases ... |
+- and typical cases ... |
+- and "happy path" cases ... |
 
 <p class="fragment">
 `python fake_data_generator.py`
@@ -153,7 +153,7 @@ Quick luigi demo
 - and customer profile info  ... |
 - everything is working great (high AUC fist-pump) ... |
 
-<p class="fragment">
+---
 ```sql
 SELECT *
 FROM transactions t
@@ -164,10 +164,9 @@ ON t.merchant_id = m._id
 ...
 WHERE t.trxn_dt between ('2017-12-01', '2017-12-10')
 ```
+<p class="fragment">
+but then one day passes...
 <\p>
-
-- but then one day passes |
-
 
 ---
 <!-- .slide: style="text-align: left;"> -->  
