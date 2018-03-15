@@ -54,26 +54,32 @@
 ---
 <!-- .slide: style="text-align: left;"> -->  
 ## Strategy: Build a Fake Data Ecosystem
-* unit and integration testing
-* edge and simple cases
-* sometimes the real API isn't ready
+- unit and integration testing |
+- edge and simple cases |
+- sometimes the real API isn't ready |
 
 ---?code=generate_fake_data.py&lang=python&title=Fake Data Generator
 
+@[228-248](This script deletes and re-generates the fake data)
 @[9-11,26-39](Faker can easily generate fake business fields)
 @[151-225](Randomly generate transaction data)
 @[41-63](Clean up after yourself)
 
+---
+<!-- .slide: style="text-align: left;"> -->  
+```
+python fake_data_generator.py
+```
 
 ---
+<!-- .slide: style="text-align: left;"> -->  
 ## Use a task scheduler
 
-#### Examples
-* Luigi
-* Airflow
-* GNU make
+- Airflow (by Airbnb) |
+- GNU make |
+- Celery |
+- Luigi (by Spotify) |
 
-Now walk through luigi example
 ---
 ## Chunk your "queries" wisely
 
