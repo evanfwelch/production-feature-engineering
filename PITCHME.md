@@ -29,10 +29,10 @@
 
 ---
 <!-- .slide: style="text-align: left;"> -->  
-## Case Study: Bank Digital Product
+## Case Study
 
-### Data landscape |
-@fa[bank class="fragment"](Company X is a bank with millions of customers)
+### Data landscape
+<ul style="list-style: none;">
 <li class="fragment">@fa[bank](Company X is a bank with millions of customers)</li>
 <li class="fragment">@fa[bank](Company X is a bank with millions of customers)</li>
 <li class="fragment">@fa[bank](Company X is a bank with millions of customers)</li>
