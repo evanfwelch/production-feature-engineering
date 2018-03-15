@@ -148,8 +148,8 @@ Note: so the goal is to get transactions, joined up with customers and merchant 
 
 - you're modeling on a product that is still under development |
 - you're worried about outliers |
-- you're "real data" is quite small |
-- your customers have multiple accounts or devices |
+- the "real data" is quite small |
+- customers have multiple accounts or devices |
 - you need to prove your code works... |
 - but the engineers don't have your data privileges |
 
