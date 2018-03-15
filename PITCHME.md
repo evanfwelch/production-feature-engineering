@@ -43,7 +43,7 @@
 <br>
 
 <p class="fragment">
-#### Our database
+Our database
 @fa[database](http://api.reimaginebanking.com/)
 </p>
 ---
