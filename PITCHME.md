@@ -3,30 +3,19 @@
 #### Evan Welch
 
 ---
-
+<!-- .slide: style="text-align: left;"> -->  
 ## About me
 
 <br>
 
-<!-- .slide: style="text-align: left;"> -->  
 @fa[github gp-tip](github.com/evanfwelch)
 @fa[linkedin-square gp-tip](linkedin.com/in/evanfwelch)
 @fa[instagram gp-tip](evanfwelch)
-
----
-<!-- .slide: style="text-align: left;"> -->
-## Strategies we will cover:
-
-- Building a Fake Data Ecosystem |
-- Using a task scheduler |
-- Chunking your "queries" wisely |
-- Separating data and code |
-- Using "Big Data" tools on small data |
+@fa[envelope gp-tip](evanfwelch@gmail.com)
 
 <p class="fragment">
-*Please interrupt at any time!*
+Get in touch!
 </p>
-
 ---
 <!-- .slide: style="text-align: left;"> -->  
 ## Case Study Scenario
@@ -43,6 +32,21 @@
 <p class="fragment">
 @fa[database](http://api.reimaginebanking.com/)
 </p>
+
+---
+<!-- .slide: style="text-align: left;"> -->
+## Strategies we will cover:
+
+- Building a Fake Data Ecosystem |
+- Using a task scheduler |
+- Chunking your "queries" wisely |
+- Separating data and code |
+- Using "Big Data" tools on small data |
+
+<p class="fragment">
+*Please interrupt at any time!*
+</p>
+
 
 ---
 <!-- .slide: style="text-align: left;"> -->  
