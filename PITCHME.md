@@ -249,7 +249,7 @@ for min_date, max_date in my_date_ranges:
 ```
 
 ---?code=pull_raw_data.py&lang=python&title=Isolated requirements for ETL
-@[205-213](Depending on isolated queries)
+@[205-214](Depending on isolated queries)
 
 ---
 <!-- .slide: style="text-align: left;"> -->
@@ -274,7 +274,7 @@ Note: so let's say for our project we want to make a whole bunch of transaction
 features
 ---
 <!-- .slide: style="text-align: left;"> -->  
-## How do we productionize this?
+## Here's the pandas way...
 ```python
 import pandas as pd
 
@@ -286,6 +286,9 @@ total_spend = (df.loc[df.trxn_dt == '2017-12-01', :]
                 .trxn_amt
                 .sum())
 ```
+<p class="fragment">
+But how do we productionize this?
+</p>
 
 Note: here's a pandasy simple "feature", what are some things wrong here? date, dropna vulnerable to more columns, trxn_amt hardcoded, sum not easily swappable
 
@@ -322,7 +325,7 @@ Note: data can be big or small, training or test, and transformations can be cha
 ## What do you do if:
 - Your model is working on 500MB of data... |
 - on your laptop... |
-- You get a `MemoryError` ... |
+- You get a MemoryError ... |
 - and you need to run this in the cloud... |
 
 Note: Ok so lets say you've followed all the advice. using a task scheduler, fake data, very modular queries, nicely written transformations... but you want to SCALE
@@ -343,8 +346,8 @@ Note: anyone used distributed processing? spark? hadoop? Dask? Let's take a look
 
 ---?code=exploration.py&lang=python&title=using dask to distribute feature engineering
 @[5-6](dask and dask/distributed library)
-@[114](set up a local connection to scheduler)
-@[116-118](can basically treat it like Pandas)
+@[119](set up a local connection to scheduler)
+@[122-123](can basically treat it like Pandas)
 
 ---
 <!-- .slide: style="text-align: left;"> -->
@@ -365,18 +368,10 @@ Note: anyone used distributed processing? spark? hadoop? Dask? Let's take a look
 ## Ask me anything!
 
 ---
-<!-- .slide: style="text-align: left;"> -->
-## Reach out
-
----
 <!-- .slide: style="text-align: left;"> -->  
-## About me
+## Reach out!
 
-@fa[github gp-tip](github.com/evanfwelch)
+@fa[github gp-tip](github.com/evanfwelch/production-feature-engineering)
 @fa[linkedin-square gp-tip](linkedin.com/in/evanfwelch)
-@fa[instagram gp-tip](evanfwelch)
 @fa[envelope gp-tip](evanfwelch@gmail.com)
-
-<p class="fragment">
-Get in touch!
-</p>
+@fa[instagram gp-tip](evanfwelch)

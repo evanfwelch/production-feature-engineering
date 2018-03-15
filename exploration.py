@@ -79,7 +79,7 @@ def write_feature(srs, feat_path):
     return files
 
 
-def generate_features():
+def generate_features(ddf):
     catgories_of_interest = ['grocery', 'food', 'bar']
     dates = pd.date_range('2017-12-01', '2017-12-10')
 
@@ -109,10 +109,15 @@ def generate_features():
                 # print result
                 print("Wrote feature: {}".format(feat_path))
 
+def read_data():
+    # using dask dataframes, very similar to pandas
+    ddf = dd.read_csv(ENRICHED_TRXN_DATA, sep='|', dtype={'mrch_zip':str, 'zip': str})
+    return ddf
+    
 if __name__ == '__main__':
 
     clt = Client('localhost:8786')
 
     # using dask dataframes, very similar to pandas
     ddf = dd.read_csv(ENRICHED_TRXN_DATA, sep='|', dtype={'mrch_zip':str, 'zip': str})
-    generate_features()
+    generate_features(ddf)
