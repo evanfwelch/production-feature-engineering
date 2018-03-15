@@ -47,7 +47,7 @@ Get in touch!
 
 We'll need to:
 - pull some data |
-**- do feature engineering**  |
+- **do feature engineering**  |
 - analyze/visualize/model something |
 
 
