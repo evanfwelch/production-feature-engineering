@@ -130,7 +130,7 @@ Note: show live demo first
 
 ---?code=pull_raw_data.py&lang=python&title=using luigi to schedule tasks
 @[21-44](A simple luigi.Task that calls an API)
-@[208-219](A more complex task that outer joins and flattens the data)
+@[205-219](A more complex task that outer joins and flattens the data)
 
 Note: so the goal is to get transactions, joined up with customers and merchant info... no feature engineering YET
 ---
