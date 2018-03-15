@@ -15,7 +15,7 @@
 
 ---
 <!-- .slide: style="text-align: left;"> -->
-# Strategies we will cover:
+## Strategies we will cover:
 
 - Build a Fake Data Ecosystem |
 - Use a task scheduler |
