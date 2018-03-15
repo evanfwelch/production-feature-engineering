@@ -202,16 +202,19 @@ for min_date, max_date in my_date_ranges:
     max_date=max_date))
 ```
 
----?code=pull_raw_data.py&lang=python&title=using luigi to schedule tasks
+---?code=pull_raw_data.py&lang=python&title=Isolated requirements for ETL
 @[205-213](Depending on isolated queries)
-
 
 ---
 ## How do we productionize this?
 ```python
 import pandas as pd
 
-total_spend = pd.read_csv('some_data.csv').dropna().groupby('customer_id').trxn_amt.sum()
+total_spend = (pd.read_csv('some_data.csv')
+                .dropna()
+                .groupby('customer_id')
+                .trxn_amt
+                .sum())
 ```
 
 ---
