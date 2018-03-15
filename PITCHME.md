@@ -108,7 +108,6 @@ Let's look at luigi
 @[21-44](A simple luigi.Task that calls an API)
 @[201-213](A more complex task that outer joins and flattens the data)
 
----
 <p class="fragment">
 Quick luigi demo
 </p>
@@ -128,7 +127,8 @@ Quick luigi demo
 - to anticipate changes
 - for unit testing
 - to model edge cases ...
-- and typical cases
+- and typical cases ...
+- and "happy path" cases ...
 
 <p class="fragment">
 `python fake_data_generator.py`
@@ -141,11 +141,41 @@ Quick luigi demo
 @[151-225](Randomly generate transaction data)
 @[41-63](Clean up after yourself)
 
+<p class="fragment">
+*All the data we just queried was actually fake data*
+</p>
 
 ---
-## Chunk your "queries" wisely
+<!-- .slide: style="text-align: left;"> -->  
+## What do you do if:
+- your model needs 6 months of transaction data... |
+- joined against merchant details... |
+- and customer profile info  ... |
+- everything is working great (high AUC fist-pump) ... |
+
+<p class="fragment">
+```sql
+SELECT *
+FROM transactions t
+INNER JOIN accounts a
+ON t.payer_id = a._id
+INNER JOIN merchants m
+ON t.merchant_id = m._id
+...
+WHERE t.trxn_dt between ('2017-12-01', '2017-12-10')
+```
+<\p>
+
+- but then one day passes |
 
 
+---
+<!-- .slide: style="text-align: left;"> -->  
+## Strategy: Chunk your "queries" wisely
+
+- isolate your API calls |
+- think about history... |
+- and the history of history... |
 
 ---
 ## Separate data from code
