@@ -62,8 +62,8 @@ We'll need to:
 <!-- .slide: style="text-align: left;"> -->
 ## Strategies we will cover:
 
-- Building a Fake Data Ecosystem |
 - Using a task scheduler |
+- Building a Fake Data Ecosystem |
 - Chunking your "queries" wisely |
 - Separating data and code |
 - Using "Big Data" tools on small data |
@@ -71,10 +71,6 @@ We'll need to:
 <p class="fragment">
 *Please interrupt at any time!*
 </p>
-
-
-
-
 
 ---
 <!-- .slide: style="text-align: left;"> -->  
@@ -104,13 +100,35 @@ python my_machine_learning_model.py
 - Celery |
 - Luigi (by Spotify) |
 
+<p class="fragment">
+Let's look at luigi
+</p>
+
+---?code=pull_raw_data.py&lang=python&title=using luigi to schedule tasks
+@[21-44](A simple luigi.Task that calls an API)
+@[201-213](A more complex task that outer joins and flattens the data)
+
+---
+<p class="fragment">
+Quick luigi demo
+</p>
+
+---
+<!-- .slide: style="text-align: left;"> -->  
+## What do you do if:
+- you're modeling a product that is in development |
+- you're worried about outliers |
+- your customers might have duplicate accounts |
+- you need to prove your code works... |
+- but the engineers don't have access to your data |
 
 ---
 <!-- .slide: style="text-align: left;"> -->  
 ## Strategy: build a fake data playground
-- unit and integration testing |
-- edge and simple cases |
-- sometimes the real API isn't ready |
+- to anticipate changes
+- for unit testing
+- to model edge cases ...
+- and typical cases
 
 <p class="fragment">
 `python fake_data_generator.py`
