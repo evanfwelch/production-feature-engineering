@@ -40,29 +40,30 @@
 <li class="fragment">@fa[utensils](...which belong to several categories:) @fa[car] @fa[coffee] @fa[utensils]</li>
 </ul>
 
----
-## Possible Analytical Questions
-- Do the customers fall into different spending cohorts? |
-- Is spending predictive of other behaviors? |
-- Do abrubt changes in spending indicate a life event? |
-
----
-
-## Strategy: Fake Data Ecosystem
-
-### Why
-* unit testing
-* integration testing
-* edge cases
-* interpretability
-
 <p class="fragment">
 @fa[database](http://api.reimaginebanking.com/)
 </p>
 
+---
+<!-- .slide: style="text-align: left;"> -->  
+## Possible Analytical Questions
+- Do the customers fall into different spending cohorts? |
+- Is spending predictive of other behaviors? |
+- Do abrupt changes in spending indicate a life event? |
+
+---
+<!-- .slide: style="text-align: left;"> -->  
+## Strategy: Build a Fake Data Ecosystem
+* unit and integration testing
+* edge and simple cases
+* sometimes the real API isn't ready
+
 ---?code=generate_fake_data.py&lang=python&title=Fake Data Generator
 
-@[1,3-30](Here we go)
+@[9-11,26-39](Faker can easily generate fake business fields)
+@[151-225](Randomly generate transaction data)
+@[41-63](Clean up after yourself)
+
 
 ---
 ## Use a task scheduler
