@@ -36,8 +36,8 @@
 <li class="fragment">@fa[users](with millions of customers...)</li>
 <li class="fragment">@fa[credit-card](each of whom has several cards...)</li>
 <li class="fragment">@fa[shopping-cart](on which they make purchases...)</li>
-<li class="fragment">@fa[building](at several different stores...)</li>
-<li class="fragment">@fa[utensils](which belong to several categories...) @fa[car]</li>
+<li class="fragment">@fa[building](at several different stores)</li>
+<li class="fragment">@fa[utensils](...which belong to several categories...) @fa[car] @fa[coffee]</li>
 </ul>
 
 <br>
