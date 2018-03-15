@@ -47,9 +47,16 @@ Get in touch!
 
 We'll need to:
 - pull some data |
-- **do feature engineering**  |
+- transform data into features  |
 - analyze/visualize/model something |
 
+<p class="fragment">
+*This talk focuses on feature engineering...*
+</p>
+
+<p class="fragment">
+*but doing so at scale, without mistakes, for production*
+</p>
 
 ---
 <!-- .slide: style="text-align: left;"> -->
