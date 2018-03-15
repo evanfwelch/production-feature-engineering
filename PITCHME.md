@@ -223,7 +223,7 @@ Note: what's wrong here? this query has everything joined to everything, hard co
 - isolate your API calls |
 - think about history... |
 - and the history of history... |
-- user parameter injection |
+- use parameter injection |
 - think about the velocity of the data |
 
 Note: there are some considerations to querying more repeatable... whether api or SQL
