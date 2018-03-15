@@ -40,28 +40,25 @@
 <li class="fragment">@fa[utensils](...which belong to several categories:) @fa[car] @fa[coffee] @fa[utensils]</li>
 </ul>
 
-<br>
-
-<p class="fragment">
-Our database
-@fa[database](http://api.reimaginebanking.com/)
-</p>
 ---
-
-### Possible analytical needs
+## Possible Analytical Questions
 - Do the customers fall into different spending cohorts? |
 - Is spending predictive of other behaviors? |
 - Do abrubt changes in spending indicate a life event? |
 
-
 ---
-## Fake Data Ecosystem
+
+## Strategy: Fake Data Ecosystem
 
 ### Why
 * unit testing
 * integration testing
 * edge cases
 * interpretability
+
+<p class="fragment">
+@fa[database](http://api.reimaginebanking.com/)
+</p>
 
 ---?code=generate_fake_data.py&lang=python&title=Fake Data Generator
 

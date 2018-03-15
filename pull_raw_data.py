@@ -124,7 +124,6 @@ class GetRawTransactionData(luigi.Task):
                 for cust in cust_ids[filenum*rough_size:(filenum+1)*rough_size]:
                     file_cust_mapping[filenum].append(cust)
                     for acct in dict_cust_acct[cust]:
-                        print(acct)
 
                         # get this person's purchases
                         r = requests.get(
@@ -168,6 +167,37 @@ class GetMerchantData(luigi.Task):
         with open(self.output().path, 'w') as f:
             json.dump(r.json(), f)
 
+def _enrich_trxn(trxn, cust_key, acct_cust_key, acct_rewards_key, mrch_key):
+    new_trxn = {**trxn}
+
+    # account details
+    new_trxn['customer_id'] = acct_cust_key[trxn['payer_id']]
+    new_trxn['rewards'] = acct_rewards_key[trxn['payer_id']]
+
+    # customer details
+    new_trxn['cust_first_nm'] = cust_key[new_trxn['customer_id']]['first_name']
+    new_trxn['cust_last_nm'] = cust_key[new_trxn['customer_id']]['last_name']
+    new_trxn['cust_state'] = cust_key[new_trxn['customer_id']]['address']['state']
+    new_trxn['cust_zip'] = cust_key[new_trxn['customer_id']]['address']['zip']
+
+    # relevant merchant
+    this_mrch = mrch_key[trxn['merchant_id']]
+
+    # merchant addr
+    this_addr = this_mrch.get('address', {})
+    new_trxn['mrch_state'] = this_addr.get('state', None)
+    new_trxn['mrch_zip'] = this_addr.get('zip', None)
+
+    # merchant lat/oon
+    this_geo = this_mrch.get('geocode', {})
+    new_trxn['mrch_lat'] = this_geo.get('lat', None)
+    new_trxn['mrch_lon'] = this_geo.get('lng', None)
+
+    # merchant categories
+    new_trxn['mrch_catgs'] = this_mrch.get('category',[])
+
+    return new_trxn
+
 class JoinAndFlattenTransactions(luigi.Task):
     # merge merchant and customer info into big flat table
 
@@ -201,7 +231,6 @@ class JoinAndFlattenTransactions(luigi.Task):
         acct_file = self.requires()['accounts'].output().path
         with open(acct_file, 'r') as acct_f:
             accts = json.loads(acct_f.read())
-            print(len(accts))
         acct_cust_key = {acct['_id']:acct['customer_id'] for acct in accts}
         acct_rewards_key = {acct['_id']:acct['rewards'] for acct in accts}
 
@@ -211,37 +240,6 @@ class JoinAndFlattenTransactions(luigi.Task):
             merchants = json.loads(mrch_f.read())
         mrch_key = {mrch['_id']: mrch for mrch in merchants}
 
-
-        def _enrich_trxn(trxn, cust_key, acct_cust_key, acct_rewards_key, mrch_key):
-            new_trxn = {**trxn}
-
-            # account details
-            new_trxn['customer_id'] = acct_cust_key[trxn['payer_id']]
-            new_trxn['rewards'] = acct_rewards_key[trxn['payer_id']]
-
-            # customer details
-            new_trxn['cust_first_nm'] = cust_key[new_trxn['customer_id']]['first_name']
-            new_trxn['cust_last_nm'] = cust_key[new_trxn['customer_id']]['last_name']
-            new_trxn['cust_state'] = cust_key[new_trxn['customer_id']]['address']['state']
-            new_trxn['cust_zip'] = cust_key[new_trxn['customer_id']]['address']['zip']
-
-            # relevant merchant
-            this_mrch = mrch_key[trxn['merchant_id']]
-
-            # merchant addr
-            this_addr = this_mrch.get('address', {})
-            new_trxn['mrch_state'] = this_addr.get('state', None)
-            new_trxn['mrch_zip'] = this_addr.get('zip', None)
-
-            # merchant lat/oon
-            this_geo = this_mrch.get('geocode', {})
-            new_trxn['mrch_lat'] = this_geo.get('lat', None)
-            new_trxn['mrch_lon'] = this_geo.get('lon', None)
-
-            # merchant categories
-            new_trxn['mrch_catgs'] = this_mrch.get('category',[])
-
-            return new_trxn
 
         enriched_trxns = trxn_bag.map(lambda trxn: _enrich_trxn(trxn,
             cust_key=cust_key,
@@ -262,3 +260,7 @@ class JoinAndFlattenTransactions(luigi.Task):
             sep='|',
             index=False,
             chunksize=5)
+
+        # make the touchfile
+        with open(self.output().path, 'w') as touchfile:
+            touchfile.write(' ')

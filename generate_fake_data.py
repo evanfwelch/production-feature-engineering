@@ -21,7 +21,7 @@ API_URL = 'http://api.reimaginebanking.com'
 #############
 
 # how many customers to generate
-N_CUSTOMERS = 10
+N_CUSTOMERS = 1000
 
 def new_customer_payload():
     new_cust = {}
