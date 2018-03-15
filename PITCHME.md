@@ -5,8 +5,6 @@
 ---
 <!-- .slide: style="text-align: left;"> -->  
 ## About me
-Note: Majored in physics, lots of time in quantitative finance, got into ML, data science, wanted to affect customers
-
 <br>
 
 @fa[github gp-tip](github.com/evanfwelch)
@@ -18,11 +16,11 @@ Note: Majored in physics, lots of time in quantitative finance, got into ML, dat
 Get in touch!
 </p>
 
+Note: Majored in physics, lots of time in quantitative finance, got into ML, data science, wanted to affect customers
+
 ---
 <!-- .slide: style="text-align: left;"> -->  
 ## Case Study Scenario
-Note: When all of you join companies/interview, zoom out and get big picture data view
-
 <ul style="list-style: none;">
 <li class="fragment">@fa[bank](C1 is a bank ...)</li>
 <li class="fragment">@fa[users](with millions of customers...)</li>
@@ -36,19 +34,22 @@ Note: When all of you join companies/interview, zoom out and get big picture dat
 @fa[database](http://api.reimaginebanking.com/)
 </p>
 
+Note: When all of you join companies/interview, zoom out and get big picture data view
+
+
 ---
 <!-- .slide: style="text-align: left;"> -->  
-Note: In Seattle we work on digital products to improve customer financial health, here are some potential questions
+
 ## Possible Analytical Questions
 - Do the customers fall into different spending cohorts? |
 - Is spending predictive of other behaviors? |
 - Do abrupt changes in spending indicate a life event? |
 
-
+Note: In Seattle we work on digital products to improve customer financial health, here are some potential questions
 ---
 <!-- .slide: style="text-align: left;"> -->  
 ## To answer any of these
-Note: Whether it's a dashboard, a simple KPI, or an ML model, you're analytical plan will share some basic steps
+
 We'll need to:
 - pull some data |
 - transform data into features  |
@@ -62,10 +63,11 @@ We'll need to:
 *but doing so at scale, without mistakes, for production*
 </p>
 
+Note: Whether it's a dashboard, a simple KPI, or an ML model, you're analytical plan will share some basic steps
 ---
 <!-- .slide: style="text-align: left;"> -->
 ## Strategies we will cover:
-Note: Feature engineering--lots of great ideas online, on kaggle, in scikit-learn docs on *what* to engineer. We'll focus on some best practices for how to execute that plan and get it into prod. Prepare to never be done.
+
 
 - Using a task scheduler |
 - Building a Fake Data Ecosystem |
@@ -77,10 +79,11 @@ Note: Feature engineering--lots of great ideas online, on kaggle, in scikit-lear
 *Please interrupt at any time!*
 </p>
 
+Note: Feature engineering--lots of great ideas online, on kaggle, in scikit-learn docs on *what* to engineer. We'll focus on some best practices for how to execute that plan and get it into prod. Prepare to never be done.
 ---
 <!-- .slide: style="text-align: left;"> -->  
 ## What's wrong with this picture?
-Note: all data in one pull, what if dates change..., what if data gets deleted... python script might succeed on incomplete data... what if there's a mistake in the notebook? what packages do i need to run the notebook? can i send this to a colleague?
+
 
 ```bash
 cd my/project/folder
@@ -103,10 +106,10 @@ jupyter nbconvert --to script my_machine_learning_model.ipynb
 python my_machine_learning_model.py
 ```
 
+Note: all data in one pull, what if dates change..., what if data gets deleted... python script might succeed on incomplete data... what if there's a mistake in the notebook? what packages do i need to run the notebook? can i send this to a colleague?
 ---
 <!-- .slide: style="text-align: left;"> -->  
 ## Strategy: use a task scheduler
-Note: obviously projects evolve organically, and the above is ok for many cases, but anything you MIGHT want to re-run or get feedback on, I highly suggest using a task scheduler to build a pipeline
 
 - GNU make |
 - Celery |
@@ -117,18 +120,19 @@ Note: obviously projects evolve organically, and the above is ok for many cases,
 Let's look at luigi
 </p>
 
+Note: obviously projects evolve organically, and the above is ok for many cases, but anything you MIGHT want to re-run or get feedback on, I highly suggest using a task scheduler to build a pipeline
 ---
 <!-- .slide: style="text-align: left;"> -->  
 ## Quick luigi demo...
-Note: show live demo first
 
+
+Note: show live demo first
 
 ---?code=pull_raw_data.py&lang=python&title=using luigi to schedule tasks
 @[21-44](A simple luigi.Task that calls an API)
 @[208-219](A more complex task that outer joins and flattens the data)
 
 Note: so the goal is to get transactions, joined up with customers and merchant info... no feature engineering YET
-
 ---
 <!-- .slide: style="text-align: left;"> -->
 ## Strategies we will cover:
@@ -141,7 +145,6 @@ Note: so the goal is to get transactions, joined up with customers and merchant 
 ---
 <!-- .slide: style="text-align: left;"> -->  
 ## What do you do if:
-Note: Ok so we just went through how to pull data in an organized, modular way, but what do you do if
 
 - you're modeling on a product that is still under development |
 - you're worried about outliers |
@@ -150,11 +153,11 @@ Note: Ok so we just went through how to pull data in an organized, modular way, 
 - you need to prove your code works... |
 - but the engineers don't have your data privileges |
 
-
+Note: Ok so we just went through how to pull data in an organized, modular way, but what do you do if
 ---
 <!-- .slide: style="text-align: left;"> -->  
 ## Strategy: build a fake data playground
-Note: sometimes for a project we want the ability to generate a whole bunch of fake, extreme or ultra-realistic values
+
 
 - to anticipate changes |
 - for unit testing |
@@ -166,9 +169,9 @@ Note: sometimes for a project we want the ability to generate a whole bunch of f
 `python fake_data_generator.py`
 </p>
 
+Note: sometimes for a project we want the ability to generate a whole bunch of fake, extreme or ultra-realistic values
 
 ---?code=generate_fake_data.py&lang=python&title=Fake Data Generator
-Note: For this talk i wrote a module that populates the hackathon API with fake data
 
 @[228-248](This script deletes and re-generates the fake data)
 @[9-11,26-39](Faker can easily generate fake business fields)
@@ -179,6 +182,7 @@ Note: For this talk i wrote a module that populates the hackathon API with fake 
 *All the data we just queried was actually fake data*
 </p>
 
+Note: For this talk i wrote a module that populates the hackathon API with fake data
 ---
 <!-- .slide: style="text-align: left;"> -->
 ## Strategies we will cover:
@@ -191,12 +195,11 @@ Note: For this talk i wrote a module that populates the hackathon API with fake 
 ---
 <!-- .slide: style="text-align: left;"> -->  
 ## What do you do if:
-Note: what's wrong here? this query has everything joined to everything, hard coded dates
-
 - your model needs 6 months of transaction data... |
 - joined against merchant details... |
 - and customer profile info  ... |
 - everything is working great (high AUC fist-pump) ... |
+
 
 ---
 ```sql
@@ -213,18 +216,17 @@ WHERE t.trxn_dt between ('2017-06-01', '2017-12-31')
 but then one day passes...
 </p>
 
-
+Note: what's wrong here? this query has everything joined to everything, hard coded dates
 ---
 <!-- .slide: style="text-align: left;"> -->  
 ## Strategy: Chunk your "queries" wisely
-Note: there are some considerations to querying more repeatable... whether api or SQL
-
 - isolate your API calls |
 - think about history... |
 - and the history of history... |
 - user parameter injection |
 - think about the velocity of the data |
 
+Note: there are some considerations to querying more repeatable... whether api or SQL
 ---
 ```python
 import sqlite3
@@ -248,6 +250,8 @@ for min_date, max_date in my_date_ranges:
     max_date=max_date))
 ```
 
+Note: consider running your queries within SQL
+
 ---?code=pull_raw_data.py&lang=python&title=Isolated requirements for ETL
 @[209-214](Depending on isolated queries)
 
@@ -262,8 +266,7 @@ for min_date, max_date in my_date_ranges:
 
 ---
 <!-- .slide: style="text-align: left;"> -->  
-Note: so let's say for our project we want to make a whole bunch of transaction
-features
+
 ## Ok, so say we want to make some features....
 - total, average, and count ...
 - of credit card transactions...
@@ -271,10 +274,11 @@ features
 - in several categories: `food`, `bar`, `gas`, ...
 - for particular time windows ...
 
+Note: so let's say for our project we want to make a whole bunch of transaction features
+
 ---
 <!-- .slide: style="text-align: left;"> -->  
 ## Here's the pandas way...
-Note: here's a pandasy simple "feature", what are some things wrong here? date, dropna vulnerable to more columns, trxn_amt hardcoded, sum not easily swappable
 
 ```python
 import pandas as pd
@@ -291,11 +295,11 @@ total_spend = (df.loc[df.trxn_dt == '2017-12-01', :]
 But how do we productionize this?
 </p>
 
+Note: here's a pandasy simple "feature", what are some things wrong here? date, dropna vulnerable to more columns, trxn_amt hardcoded, sum not easily swappable
 
 ---
 <!-- .slide: style="text-align: left;"> -->  
 ## Separate *data* from *operations*
-Note: data can be big or small, training or test, and transformations can be chained together... re-used, imported.. analyzed... unit tested
 
 #### and separate code into:
 - filtering functions |
@@ -307,6 +311,8 @@ Note: data can be big or small, training or test, and transformations can be cha
 <p class="fragment">
 Let's look at an example from `exploration.ipynb`
 </p>
+
+Note: data can be big or small, training or test, and transformations can be chained together... re-used, imported.. analyzed... unit tested
 
 
 ---?code=exploration.py&lang=python&title=feature engineering code
@@ -322,7 +328,6 @@ Let's look at an example from `exploration.ipynb`
 
 ---
 <!-- .slide: style="text-align: left;"> -->  
-Note: Ok so lets say you've followed all the advice. using a task scheduler, fake data, very modular queries, nicely written transformations... but you want to SCALE
 
 ## What do you do if:
 - Your model is working on 500MB of data... |
@@ -330,10 +335,10 @@ Note: Ok so lets say you've followed all the advice. using a task scheduler, fak
 - You get a MemoryError ... |
 - and you need to run this in the cloud... |
 
-
+Note: Ok so lets say you've followed all the advice. using a task scheduler, fake data, very modular queries, nicely written transformations... but you want to SCALE
 ---
 <!-- .slide: style="text-align: left;"> -->  
-Note: anyone used distributed processing? spark? hadoop? Dask? Let's take a look.
+
 
 ## Use distributed processing before you *need* it
 - to scale from 100 rows to 100GB |
@@ -344,6 +349,7 @@ Note: anyone used distributed processing? spark? hadoop? Dask? Let's take a look
 Back to `exploration.py` to use dask.
 </p>
 
+Note: anyone used distributed processing? spark? hadoop? Dask? Let's take a look.
 
 ---?code=exploration.py&lang=python&title=using dask to distribute feature engineering
 @[5-6](dask and dask/distributed library)
@@ -352,7 +358,7 @@ Back to `exploration.py` to use dask.
 
 ---
 <!-- .slide: style="text-align: left;"> -->
-Note: run exploration.py with dask distributed... set up workers and go to interface first
+
 ## Demo of `dask.distributed`
 
 ---
@@ -364,6 +370,7 @@ Note: run exploration.py with dask distributed... set up workers and go to inter
 * ~~Separating data from operations~~
 * ~~Using "Big Data" tools on small data~~
 
+Note: run exploration.py with dask distributed... set up workers and go to interface first
 ---
 <!-- .slide: style="text-align: left;"> -->
 ## Ask me anything!
