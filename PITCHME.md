@@ -57,7 +57,10 @@
 - unit and integration testing |
 - edge and simple cases |
 - sometimes the real API isn't ready |
-- `python fake_data_generator.py` |
+
+<p class="fragment">
+`python fake_data_generator.py`
+</p>
 
 ---?code=generate_fake_data.py&lang=python&title=Fake Data Generator
 
