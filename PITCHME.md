@@ -162,11 +162,11 @@ ON t.payer_id = a._id
 INNER JOIN merchants m
 ON t.merchant_id = m._id
 ...
-WHERE t.trxn_dt between ('2017-12-01', '2017-12-10')
+WHERE t.trxn_dt between ('2017-06-01', '2017-12-31')
 ```
 <p class="fragment">
 but then one day passes...
-<\p>
+</p>
 
 ---
 <!-- .slide: style="text-align: left;"> -->  
@@ -175,8 +175,32 @@ but then one day passes...
 - isolate your API calls |
 - think about history... |
 - and the history of history... |
+- user parameter injection |
+- think about the velocity of the data |
 
 ---
+```python
+import sqlite3
+conn = sqlite3.connect('my.db')
+c = conn.cursor()
+
+my_query = """
+SELECT *
+FROM transactions t
+INNER JOIN accounts a
+ON t.payer_id = a._id
+INNER JOIN merchants m
+ON t.merchant_id = m._id
+...
+WHERE t.trxn_dt between ({min_date}, {max_date})"""
+
+...
+for min_date, max_date in my_date_ranges:
+  c.execute(my_query.format(
+    min_date=min_date,
+    max_date=max_date))
+```
+
 ## Separate data from code
 
 ### and separate code into
