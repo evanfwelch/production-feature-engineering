@@ -57,12 +57,7 @@
 - unit and integration testing |
 - edge and simple cases |
 - sometimes the real API isn't ready |
-
----
-<!-- .slide: style="text-align: left;"> -->  
-```python
-python fake_data_generator.py
-```
+- `python fake_data_generator.py` |
 
 ---?code=generate_fake_data.py&lang=python&title=Fake Data Generator
 
