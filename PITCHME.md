@@ -55,7 +55,11 @@
 <!-- .slide: style="text-align: left;"> -->  
 ## To answer any of these
 
-**FEATURE ENGINEERING**
+We need to:
+- pull some data |
+- do **FEATURE ENGINEERING** |
+- analyze/visualize/model something |
+
 
 ---
 <!-- .slide: style="text-align: left;"> -->  
