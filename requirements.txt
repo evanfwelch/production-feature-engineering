@@ -6,3 +6,4 @@ dask[complete]
 requests
 pandas
 numpy
+bokeh

@@ -76,7 +76,7 @@ class GetRawTransactionData(luigi.Task):
     """
 
     # how many partitions to talk about
-    n_partitions = luigi.IntParameter(default=4)
+    n_partitions = luigi.IntParameter(default=100)
 
     def requires(self):
         return GetRawAccountData()
@@ -114,6 +114,10 @@ class GetRawTransactionData(luigi.Task):
         # custs per file
         rough_size = math.ceil(len(cust_ids)/self.n_partitions)
         for filenum in range(self.n_partitions):
+            # set status messages during the workload
+            self.set_status_message("Progress: %d / %d" % (filenum, self.n_partitions))
+            self.set_progress_percentage(100*filenum/self.n_partitions)
+
             file_data = []
             file_cust_mapping[filenum] = []
             file_path = os.path.join(DATA_PATH, 'RAW', 'purchases',
@@ -182,6 +186,7 @@ def _enrich_trxn(trxn, cust_key, acct_cust_key, acct_rewards_key, mrch_key):
 
     # relevant merchant
     this_mrch = mrch_key[trxn['merchant_id']]
+    new_trxn['mrch_name'] = this_mrch.get('name', None)
 
     # merchant addr
     this_addr = this_mrch.get('address', {})

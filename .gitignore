@@ -20,3 +20,6 @@ merchant_data/*.zip
 
 # exclude actual data
 DATA/*
+
+# distributed
+dask-worker-space/*
