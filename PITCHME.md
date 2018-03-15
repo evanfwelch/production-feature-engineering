@@ -176,6 +176,17 @@ Note: sometimes for a project we want the ability to generate a whole bunch of f
 </p>
 
 Note: For this lecture i wrote a module that populates the hackathon API with fake data
+
+
+---
+<!-- .slide: style="text-align: left;"> -->
+## Strategies we will cover:
+* ~~Using a task scheduler~~
+* ~~Building a Fake Data Ecosystem~~
+* Chunking your "queries" wisely
+* Separating data from operations
+* Using "Big Data" tools on small data
+
 ---
 <!-- .slide: style="text-align: left;"> -->  
 ## What do you do if:
@@ -241,6 +252,15 @@ for min_date, max_date in my_date_ranges:
 @[205-213](Depending on isolated queries)
 
 ---
+<!-- .slide: style="text-align: left;"> -->
+## Strategies we will cover:
+* ~~Using a task scheduler~~
+* ~~Building a Fake Data Ecosystem~~
+* ~~Chunking your "queries" wisely~~
+* Separating data from operations
+* Using "Big Data" tools on small data
+
+---
 <!-- .slide: style="text-align: left;"> -->  
 ## Ok, so say we want to make some features....
 - total, average, and count ...
@@ -248,8 +268,6 @@ for min_date, max_date in my_date_ranges:
 - per `customer_id` (not just `account_id`)
 - in several categories: `food`, `bar`, `gas`, ...
 - for particular time windows ...
-
-
 
 
 Note: so let's say for our project we want to make a whole bunch of transaction
@@ -288,6 +306,17 @@ Let's look at an example from `exploration.ipynb`
 
 Note: data can be big or small, training or test, and transformations can be chained together... re-used, imported.. analyzed... unit tested
 
+---?code=exploration.py&lang=python&title=feature engineering code
+
+---
+<!-- .slide: style="text-align: left;"> -->
+## Strategies we will cover:
+* ~~Using a task scheduler~~
+* ~~Building a Fake Data Ecosystem~~
+* ~~Chunking your "queries" wisely~~
+* ~~Separating data from operations~~
+* Using "Big Data" tools on small data
+
 ---
 <!-- .slide: style="text-align: left;"> -->  
 ## What do you do if:
@@ -316,3 +345,38 @@ Note: anyone used distributed processing? spark? hadoop? Dask? Let's take a look
 @[5-6](dask and dask/distributed library)
 @[114](set up a local connection to scheduler)
 @[116-118](can basically treat it like Pandas)
+
+---
+<!-- .slide: style="text-align: left;"> -->
+## Demo of `dask.distributed`
+
+---
+<!-- .slide: style="text-align: left;"> -->
+## Strategies we will cover:
+* ~~Using a task scheduler~~
+* ~~Building a Fake Data Ecosystem~~
+* ~~Chunking your "queries" wisely~~
+* ~~Separating data from operations~~
+* ~~Using "Big Data" tools on small data~~
+
+
+---
+<!-- .slide: style="text-align: left;"> -->
+## Ask me anything!
+
+---
+<!-- .slide: style="text-align: left;"> -->
+## Reach out
+
+---
+<!-- .slide: style="text-align: left;"> -->  
+## About me
+
+@fa[github gp-tip](github.com/evanfwelch)
+@fa[linkedin-square gp-tip](linkedin.com/in/evanfwelch)
+@fa[instagram gp-tip](evanfwelch)
+@fa[envelope gp-tip](evanfwelch@gmail.com)
+
+<p class="fragment">
+Get in touch!
+</p>
