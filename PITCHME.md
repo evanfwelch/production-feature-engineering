@@ -29,30 +29,29 @@
 
 ---
 <!-- .slide: style="text-align: left;"> -->  
-## Case Study
+## Case Study Scenario
 
 <ul style="list-style: none;">
 <li class="fragment">@fa[bank](C1 is a bank ...)</li>
 <li class="fragment">@fa[users](with millions of customers...)</li>
 <li class="fragment">@fa[credit-card](each of whom has several cards...)</li>
 <li class="fragment">@fa[shopping-cart](on which they make purchases...)</li>
-<li class="fragment">@fa[amazon, apple](at several stores...)</li>
-
+<li class="fragment">@fa[building](at several different stores...)</li>
+<li class="fragment">@fa[building](at several different stores...)</li>
 </ul>
-
-<!--
-@fa[person](These customers have multiple accounts) |
-@fa[credit-card](A given credit card account makes many purchases) |
-@fa[store](The merchants have attributes, categories) |
-</ul> -->
-
-### Analytical questions/needs |
-- Do the customers fall into different spending cohorts? |
-- Are spending behaviors (or changes thereof) predictive of other behaviors? |
 
 <br>
 
-@fa[database gp-tip](http://api.reimaginebanking.com/) |
+<p class="fragment">
+@fa[database](http://api.reimaginebanking.com/) 
+</p>
+---
+
+### Possible analytical needs
+- Do the customers fall into different spending cohorts? |
+- Is spending predictive of other behaviors? |
+- Do abrubt changes in spending indicate a life event? |
+
 
 ---
 ## Fake Data Ecosystem
