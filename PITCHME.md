@@ -108,9 +108,10 @@ Let's look at luigi
 @[21-44](A simple luigi.Task that calls an API)
 @[201-213](A more complex task that outer joins and flattens the data)
 
-<p class="fragment">
-Quick luigi demo
-</p>
+---
+<!-- .slide: style="text-align: left;"> -->  
+## Quick luigi demo...
+
 
 ---
 <!-- .slide: style="text-align: left;"> -->  
@@ -201,7 +202,20 @@ for min_date, max_date in my_date_ranges:
     max_date=max_date))
 ```
 
-## Separate data from code
+---?code=pull_raw_data.py&lang=python&title=using luigi to schedule tasks
+@[205-213](Depending on isolated queries)
+
+
+---
+## How do we productionize this?
+```python
+import pandas as pd
+
+total_spend = pd.read_csv('some_data.csv').dropna().groupby('customer_id').trxn_amt.sum()
+```
+
+---
+## Separate *data* from *code*
 
 ### and separate code into
 * filter
