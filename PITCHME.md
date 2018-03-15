@@ -58,6 +58,12 @@
 - edge and simple cases |
 - sometimes the real API isn't ready |
 
+---
+<!-- .slide: style="text-align: left;"> -->  
+```python
+python fake_data_generator.py
+```
+
 ---?code=generate_fake_data.py&lang=python&title=Fake Data Generator
 
 @[228-248](This script deletes and re-generates the fake data)
@@ -65,11 +71,7 @@
 @[151-225](Randomly generate transaction data)
 @[41-63](Clean up after yourself)
 
----
-<!-- .slide: style="text-align: left;"> -->  
-```
-python fake_data_generator.py
-```
+
 
 ---
 <!-- .slide: style="text-align: left;"> -->  
