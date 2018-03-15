@@ -24,7 +24,7 @@
 - Using "Big Data" tools on small data |
 
 <p class="fragment">
-*Please interrupt at anytime!*
+*Please interrupt at any time!*
 </p>
 
 ---
@@ -53,7 +53,42 @@
 
 ---
 <!-- .slide: style="text-align: left;"> -->  
-## Strategy: Build a Fake Data Ecosystem
+## To answer any of these
+
+**FEATURE ENGINEERING**
+
+---
+<!-- .slide: style="text-align: left;"> -->  
+## What's wrong with this picture?
+
+```bash
+cd my/project/folder
+
+# get data
+./download_lots_of_data.sh > data.json
+echo "Done getting account, customer and merchant data"
+
+# mine transactions for features
+python generate_a_bunch_of_features.py
+echo "Done mining transaction"
+
+# run a jupyter notebook
+jupyter nbconvert --to script my_machine_learning_model.ipynb
+python my_machine_learning_model.py
+```
+
+---
+<!-- .slide: style="text-align: left;"> -->  
+## Strategy: use a task scheduler
+- Airflow (by Airbnb) |
+- GNU make |
+- Celery |
+- Luigi (by Spotify) |
+
+
+---
+<!-- .slide: style="text-align: left;"> -->  
+## Strategy: build a fake data playground
 - unit and integration testing |
 - edge and simple cases |
 - sometimes the real API isn't ready |
@@ -69,35 +104,6 @@
 @[151-225](Randomly generate transaction data)
 @[41-63](Clean up after yourself)
 
----
-<!-- .slide: style="text-align: left;"> -->  
-## What's wrong with this picture?
-
-```bash
-cd my/project/folder
-
-# get data
-./get_account_data.sh > accounts.json
-./get_customer_data.sh > customers.json
-./get_merchant_data.sh > merchants.json
-echo "Done getting account, customer and merchant data"
-
-# run transaction miner
-python mine_transaction_data.py
-echo "Done mining transaction"
-
-# start jupyter notebook
-jupyter notebook ml_model_newest_v2.ipynb
-```
-
----
-<!-- .slide: style="text-align: left;"> -->  
-## Strategy: Use a task scheduler
-
-- Airflow (by Airbnb) |
-- GNU make |
-- Celery |
-- Luigi (by Spotify) |
 
 ---
 ## Chunk your "queries" wisely
