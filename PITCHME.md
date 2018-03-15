@@ -23,7 +23,9 @@
 - Separate data and code |
 - Distributed processing on small data |
 
+<p class="fragment">
 *Please interrupt at anytime!*
+</p>
 
 ---
 <!-- .slide: style="text-align: left;"> -->  
